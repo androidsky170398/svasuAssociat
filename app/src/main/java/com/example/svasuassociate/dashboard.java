@@ -386,7 +386,7 @@ public class dashboard extends AppCompatActivity implements BottomNavigationView
         tv_Registration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(dashboard.this, dashboard.class));
+                startActivity(new Intent(dashboard.this, MainActivity.class));
                 drawer.closeDrawers();
             }
         });

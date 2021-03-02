@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:background="#009688"
+    android:layout_gravity="center_vertical"
+    android:background="@color/lightgrey"
     android:orientation="vertical"
     tools:context=".splashscrn">
+
     <TextView
+        android:id="@+id/statictxt"
+        android:layout_below="@+id/staic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:text="Please wait..."
-        android:textColor="@color/white"
-        android:visibility="gone" />
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/_28sdp"
+        android:text="S VASU Infra"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/staic"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_220sdp"
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/svasu"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textStyle="bold" />
 
     <com.daimajia.numberprogressbar.NumberProgressBar
         android:id="@+id/npb_progress"
@@ -30,68 +46,23 @@
         app:progress_text_color="@color/white"
         app:progress_text_visibility="visible" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/img_icon"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/logo" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/logoname" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-        <TextView
-            android:id="@+id/txt1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="Welcome In Real State Services"
-            android:textColor="@color/Metallicgold"
-            android:textSize="@dimen/_30ssp"
-            android:textStyle="italic" />
-        <!--<TextView
+    <ImageView
+        android:id="@+id/iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="In"
-        android:textColor="@color/Metallicgold"
-        android:textSize="@dimen/_30ssp"
-        android:textStyle="italic"
-            android:id="@+id/txt2"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="Raamsa"
-            android:textColor="@color/Metallicgold"
-            android:textSize="@dimen/_30ssp"
-            android:textStyle="italic"
-            android:id="@+id/txt3"/>
--->
-    </LinearLayout>
-</LinearLayout>
+        android:baselineAlignBottom="true"
+        android:src="@drawable/loading"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true" />
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitCenter"
+        android:src="@drawable/svasu"
+        android:visibility="gone"/>
+
+</RelativeLayout>
