@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".dashboard">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/ToolbarColoredBackArrow">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:openDrawer="start">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                </LinearLayout>
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/navigationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/Parrotgreen"
+                    android:visibility="gone"
+                    app:itemBackground="@color/Parrotgreen"
+                    app:itemIconTint="@drawable/bottom_navigation_selector"
+                    app:itemTextColor="@drawable/bottom_navigation_selector"
+                    app:menu="@menu/maindashboard" />
+            </LinearLayout>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="@color/white"
+                android:fitsSystemWindows="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/profile_header" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/veiw1" />
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="40dp"
+                                android:orientation="vertical"
+                                android:paddingLeft="30dp"
+                                android:paddingBottom="@dimen/_15sdp">
+
+                                <TextView
+                                    android:id="@+id/tv_Dashboard"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:drawableLeft="@drawable/ic_dashboard"
+                                    android:background="@drawable/drawer"                                    android:drawablePadding="20dp"
+                                    android:drawableTint="@color/dark"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:text="Dashboard"
+                                    android:textColor="@color/dark"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_Profile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:background="@drawable/drawer"                                       android:layout_marginTop="@dimen/_10sdp"
+                                    android:drawableLeft="@drawable/ic_person"
+                                    android:drawablePadding="20dp"
+                                    android:drawableTint="@color/dark"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:text="My Profile"
+                                    android:textColor="@color/dark"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_MyLeft"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:clickable="true"
+                                    android:visibility="gone"
+                                    android:drawableLeft="@drawable/ic_pointing_left"
+                                    android:drawablePadding="20dp"
+                                    android:drawableTint="@color/black"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:text="My Associates"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_MyRight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:clickable="true"
+                                    android:visibility="gone"
+                                    android:drawableLeft="@drawable/ic_pointing_right"
+                                    android:drawablePadding="20dp"
+                                    android:drawableTint="@color/black"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:text="My Right Member"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_MatchingProfit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:clickable="true"
+                                    android:visibility="gone"
+                                    android:drawableLeft="@drawable/ic_home_team"
+                                    android:drawablePadding="20dp"
+                                    android:drawableTint="@color/black"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:text="Team Profit"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_NetworkTree"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:clickable="true"
+                                    android:visibility="gone"
+                                    android:drawableLeft="@drawable/ic_tree"
+                                    android:drawablePadding="20dp"
+                                    android:drawableTint="@color/black"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:text="My Team Tree"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_Registration"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:clickable="true"
+                                    android:background="@drawable/drawer"
+                                    android:drawableLeft="@drawable/ic_registration"
+                                    android:drawablePadding="20dp"
+                                    android:drawableTint="@color/dark"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:text="Add New Associate"
+                                    android:textColor="@color/dark"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_History"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:clickable="true"
+                                    android:background="@drawable/drawer"
+                                    android:drawableLeft="@drawable/ic_history"
+                                    android:drawablePadding="20dp"
+                                    android:drawableTint="@color/dark"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:text="Payout Details"
+                                    android:textColor="@color/dark"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_change_password"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:clickable="true"
+                                    android:background="@drawable/drawer"
+                                    android:drawableLeft="@drawable/ic_land"
+                                    android:drawablePadding="20dp"
+                                    android:drawableTint="@color/dark"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:text="Change Password"
+                                    android:textColor="@color/dark"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_EditProfile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:clickable="true"
+                                    android:background="@drawable/drawer"
+                                    android:drawableLeft="@drawable/ic_edit"
+                                    android:drawablePadding="20dp"
+                                    android:drawableTint="@color/dark"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:text="Edit Profile"
+                                    android:textColor="@color/dark"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_accountdetails"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/drawer"
+                                    android:clickable="true"
+                                    android:drawableLeft="@drawable/ic_account_details"
+                                    android:drawablePadding="20dp"
+                                    android:drawableTint="@color/dark"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:text="Company Account Details"
+                                    android:textColor="@color/dark"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_Share"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:clickable="true"
+                                    android:background="@drawable/drawer"
+                                    android:drawableLeft="@drawable/ic_menu_share"
+                                    android:drawablePadding="20dp"
+                                    android:drawableTint="@color/dark"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:text="Share"
+                                    android:textColor="@color/dark"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_ContactUs"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/drawer"
+                                    android:clickable="true"
+                                    android:drawableLeft="@drawable/ic_call"
+                                    android:drawablePadding="20dp"
+                                    android:drawableTint="@color/dark"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:text="Contact Us"
+                                    android:textColor="@color/dark"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/tv_logout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_20sdp"
+                                    android:background="@drawable/drawer"
+                                    android:clickable="true"
+                                    android:drawableLeft="@drawable/ic_logout"
+                                    android:drawablePadding="20dp"
+                                    android:drawableTint="@color/dark"
+                                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                                    android:text="Logout"
+                                    android:textColor="@color/dark"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </ScrollView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:text="Version"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold|italic"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </com.google.android.material.navigation.NavigationView>
+        </androidx.drawerlayout.widget.DrawerLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_toast_background"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/sunrise_logo"/>
+
+    <TextView
+        android:paddingLeft="@dimen/_10sdp"
+        android:id="@+id/customToastText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fully custom toast."
+        android:textSize="20dp"
+        />
+
+</LinearLayout>

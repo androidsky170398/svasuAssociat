@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1227a1</color>
+    <color name="colorPrimaryDark">#142db8</color>
+    <color name="colorAccent">#304ce8</color>
+    <!--  <color name="colorAccent">#D81B60</color>  222c4b-->
+    <color name="Goldenyellow">#F2EB6326</color>
+    <!--  <color name="Metallicgold">#D4AF37</color>-->
+    <color name="Metallicgold">#E8EB6326</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="light_green">#CCBE2832</color>
+    <color name="grey">#BEBCBC</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#4CAF50</color>
+    <color name="darkgrey">#636363</color>
+    <color name="dark">#B60405</color>
+    <color name="darkMixBlue">#FFFEFE</color>
+    <color name="lightred">#D9EB6326</color>
+    <color name="darkred">#EBEB6326</color>
+    <color name="bluee">#009688</color>
+
+    <color name="lightgrey">#E2E2E2</color>
+
+    <color name="textcolor">#000000</color>
+    <color name="ared">#E6BE2832</color>
+
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGrapeFruit">#ED5565</color>
+    <color name="colorGrapeFruitDark">#DA4453</color>
+    <color name="colorBitterSweet">#FC6E51</color>
+    <color name="colorBitterSweetDark">#E9573F</color>
+    <color name="colorFlower">#FFCE54</color>
+    <color name="colorFlowerDark">#F68B42</color>
+    <color name="colorGrass">#A0D468</color>
+    <color name="colorGrassDark">#8CC152</color>
+    <color name="colorBlueJeans">#509CEC</color>
+    <color name="colorBlueJeansDark">#4A89DC</color>
+    <color name="colorLavander">#AC92EC</color>
+    <color name="colorLavanderDark">#967ADC</color>
+    <color name="colorMint">#48CFAD</color>
+    <color name="colorMintDark">#37BC9B</color>
+    <color name="colorAqua">#4FC1E9</color>
+    <color name="colorAquaDark">#3BAFDA</color>
+    <color name="colorPinkRose">#EC87C0</color>
+    <color name="colorPinkRoseDark">#D770AD</color>
+
+
+    <color name="Parrotgreen">#D9FB6E2F</color>
+    <color name="orange">#F2EB6326</color>
+    <color name="lightred1">#3951DD</color>
+</resources>
